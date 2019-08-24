@@ -13,8 +13,8 @@ class Snake
         Vector2f size;
         RectangleShape piece;
 
-        Vector2f headPosition;
         vector<Vector2f> body;
+        char direction;
 
     public:
         // Init
@@ -23,9 +23,15 @@ class Snake
 
         // Setters
         void move(char dir);
+        void addBodyPiece();
+        void setDirection(char direction);
+        void setHeadPosition(Vector2f pos);
 
         // Getters
         vector<Vector2f> getBody();
         RectangleShape getPiece();
+        Vector2f getSize();
+        char getDirection();
+        Vector2f getHeadPosition();
 };
 #endif
